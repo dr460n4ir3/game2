@@ -35,7 +35,7 @@ void renderGrid() {
             // Set color based on tile type
             switch (grid[y][x]) {
             case '#': glColor3f(0.5f, 0.5f, 0.5f); break; // Wall: Gray
-            case 'B': glColor3f(1.0f, 0.5f, 0.0f); break; // Building: Orange
+            case 'B': glColor3f(0.0f, 1.0f, 1.0f); break; // Building: Cyan
             case '.': glColor3f(0.0f, 0.7f, 0.0f); break; // Grass: Dark Green
             default: glColor3f(1.0f, 1.0f, 1.0f); break;  // Default: White
             }
@@ -47,7 +47,7 @@ void renderGrid() {
     // Render the player on top of the grid
     float playerXpos = playerX * TILE_SIZE / (float)SCREEN_WIDTH * 2.0f - 1.0f;
     float playerYpos = 1.0f - playerY * TILE_SIZE / (float)SCREEN_HEIGHT * 2.0f;
-    glColor3f(0.0f, 1.0f, 0.0f); // Player: Green
+    glColor3f(1.0f, 0.5f, 0.0f); // Player: Orange
     renderCharacter(playerXpos, playerYpos, '@');
 
     glFlush();
